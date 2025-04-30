@@ -35,6 +35,7 @@ targeted a 48GB GPU, a suitable GPU should be presented to reproduce the paper's
 without further modifications of the code. 
 
 ### Required libraries
+#### Anaconda
 To train and evaluate SPAI an anaconda environment can be used for installing all the 
 required dependencies as following:
 
@@ -43,6 +44,20 @@ conda create -n spai python=3.11
 conda activate spai
 conda install pytorch torchvision torchaudio pytorch-cuda=12.4 -c pytorch -c nvidia
 pip install -r requirements.txt
+```
+
+#### UV
+The project can also be managed with [uv](https://docs.astral.sh/uv/). To use uv you should download it (https://docs.astral.sh/uv/getting-started/installation/).
+
+To setup the environment go to the root of the project and run the following commands:
+```bash
+uv sync
+```
+This will install the correct python version and all dependencies (specified in the `pyproject.toml`) to an environment (`.venv`).
+
+To execute a python program with uv you run `uv run python <path to file>`. So lets say you have a python file called main.py you want to run. Then you would execute this with:
+```bash
+uv run python main.py
 ```
 
 Furthermore, the installation of [Nvidia APEX](https://github.com/NVIDIA/apex) is required for training.  
