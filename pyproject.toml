@@ -1,0 +1,49 @@
+[project]
+name = "deep-learning-2"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "albucore==0.0.16",
+    "albumentations==1.4.14",
+    "click~=8.1.7",
+    "clip",
+    "einops~=0.8.0",
+    "filetype>=1.2.0",
+    "lmdb~=1.5.1",
+    "neptune~=1.11.1",
+    "networkx~=3.3",
+    "numpy~=1.26.4",
+    "onnx>=1.17.0",
+    "onnxscript>=0.2.4",
+    "opencv-python~=4.10.0.84",
+    "pandas~=2.2.2",
+    "pillow~=10.4.0",
+    "pyyaml~=6.0.1",
+    "scipy~=1.14.0",
+    "seaborn~=0.13.2",
+    "tensorboard>=2.19.0",
+    "termcolor~=2.4.0",
+    "timm==0.4.12",
+    "torch>=2.6.0",
+    "torchaudio>=2.6.0",
+    "torchmetrics~=1.4.0.post0",
+    "torchvision>=0.21.0",
+    "tqdm~=4.66.4",
+    "yacs~=0.1.8",
+]
+
+[tool.uv.sources]
+torch = [
+  { index = "pytorch-cu124", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+]
+torchvision = [
+  { index = "pytorch-cu124", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+]
+clip = { git = "https://github.com/openai/CLIP.git" }
+
+[[tool.uv.index]]
+name = "pytorch-cu124"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true
