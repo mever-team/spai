@@ -2,27 +2,21 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <!-- Meta tags for social media banners -->
+  <meta name="description" content="Any-Resolution AI-Generated Image Detection by Spectral Learning (SPAI)">
+  <meta property="og:title" content="Any-Resolution AI-Generated Image Detection by Spectral Learning"/>
+  <meta property="og:description" content="SPAI: A novel approach for detecting AI-generated images based on spectral learning, achieving state-of-the-art performance across 13 generative models."/>
+  <meta property="og:url" content="https://mever-team.github.io/spai/"/>
+  <meta property="og:image" content="static/images/highlights.svg" />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
 
-
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:title" content="Any-Resolution AI-Generated Image Detection by Spectral Learning">
+  <meta name="twitter:description" content="SPAI: A novel approach for detecting AI-generated images based on spectral learning, achieving state-of-the-art performance across 13 generative models.">
+  <meta name="twitter:image" content="static/images/highlights.svg">
   <meta name="twitter:card" content="summary_large_image">
-  <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="keywords" content="AI-generated image detection, spectral learning, computer vision, deep learning, CVPR 2025, masked spectral learning, spectral reconstruction similarity, spectral context attention">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
 
   <title>Any-Resolution AI-Generated Image Detection by Spectral Learning</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
@@ -43,6 +37,276 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+
+  <style>
+    .method-figure {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .sota-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 0.9em;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .sota-table thead tr {
+      background-color: #333333;
+    }
+
+    .sota-table th {
+      color: #ffffff !important;
+      font-weight: bold;
+    }
+
+    .sota-table th,
+    .sota-table td {
+      padding: 12px 15px;
+      text-align: center;
+    }
+
+    .sota-table tbody tr {
+      border-bottom: 1px solid #dddddd;
+    }
+
+    .sota-table tbody tr:last-of-type {
+      border-bottom: 2px solid #333333;
+    }
+
+    .sota-table tbody tr.highlight {
+      background-color: rgba(26, 95, 180, 0.05);
+    }
+
+    /* Original LaTeX color backgrounds */
+    .bg-f1f3f2 { background-color: #f1f3f2; }
+    .bg-91d0b1 { background-color: #91d0b1; }
+    .bg-f0dfdd { background-color: #f0dfdd; }
+    .bg-e99791 { background-color: #e99791; }
+    .bg-e67c73 { background-color: #e67c73; }
+    .bg-e78b83 { background-color: #e78b83; }
+    .bg-e8958d { background-color: #e8958d; }
+    .bg-f0dfde { background-color: #f0dfde; }
+    .bg-b4ddc9 { background-color: #b4ddc9; }
+    .bg-e89088 { background-color: #e89088; }
+    .bg-67c195 { background-color: #67c195; }
+    .bg-ecb7b3 { background-color: #ecb7b3; }
+    .bg-ebafaa { background-color: #ebafaa; }
+    .bg-f0dedc { background-color: #f0dedc; }
+    .bg-f1e0df { background-color: #f1e0df; }
+    .bg-eec5c1 { background-color: #eec5c1; }
+    .bg-efd0ce { background-color: #efd0ce; }
+    .bg-f2edec { background-color: #f2edec; }
+    .bg-eec7c4 { background-color: #eec7c4; }
+    .bg-eecbc8 { background-color: #eecbc8; }
+    .bg-ecb4b0 { background-color: #ecb4b0; }
+    .bg-edbeba { background-color: #edbeba; }
+    .bg-eecdca { background-color: #eecdca; }
+    .bg-f1e7e6 { background-color: #f1e7e6; }
+    .bg-f0dddb { background-color: #f0dddb; }
+    .bg-f0dcdb { background-color: #f0dcdb; }
+    .bg-f0e0df { background-color: #f0e0df; }
+    .bg-ecbbb6 { background-color: #ecbbb6; }
+    .bg-f2f2f2 { background-color: #f2f2f2; }
+    .bg-f0dad8 { background-color: #f0dad8; }
+    .bg-f2ebea { background-color: #f2ebea; }
+    .bg-ebaaa4 { background-color: #ebaaa4; }
+    .bg-eaf0ed { background-color: #eaf0ed; }
+    .bg-eecac7 { background-color: #eecac7; }
+    .bg-f0d8d6 { background-color: #f0d8d6; }
+    .bg-e99e97 { background-color: #e99e97; }
+    .bg-edc1bd { background-color: #edc1bd; }
+    .bg-82cba7 { background-color: #82cba7; }
+    .bg-80caa6 { background-color: #80caa6; }
+    .bg-ecb5b0 { background-color: #ecb5b0; }
+    .bg-f2e9e9 { background-color: #f2e9e9; }
+    .bg-f2efef { background-color: #f2efef; }
+    .bg-f1e4e2 { background-color: #f1e4e2; }
+    .bg-ecb5b1 { background-color: #ecb5b1; }
+    .bg-eaa59f { background-color: #eaa59f; }
+    .bg-edbfbb { background-color: #edbfbb; }
+    .bg-c1e1d2 { background-color: #c1e1d2; }
+    .bg-f1e3e2 { background-color: #f1e3e2; }
+    .bg-f1e2e1 { background-color: #f1e2e1; }
+    .bg-d8eae1 { background-color: #d8eae1; }
+    .bg-f2eae9 { background-color: #f2eae9; }
+    .bg-f1e2e0 { background-color: #f1e2e0; }
+    .bg-ecb9b4 { background-color: #ecb9b4; }
+    .bg-c4e2d3 { background-color: #c4e2d3; }
+    .bg-f1e5e4 { background-color: #f1e5e4; }
+    .bg-e7efeb { background-color: #e7efeb; }
+    .bg-eaa19b { background-color: #eaa19b; }
+    .bg-daeae2 { background-color: #daeae2; }
+    .bg-d9eae2 { background-color: #d9eae2; }
+    .bg-b9decc { background-color: #b9decc; }
+    .bg-b3dcc8 { background-color: #b3dcc8; }
+    .bg-e2ede8 { background-color: #e2ede8; }
+    .bg-a7d8c0 { background-color: #a7d8c0; }
+    .bg-8fcfb0 { background-color: #8fcfb0; }
+    .bg-f2eeee { background-color: #f2eeee; }
+    .bg-c8e4d6 { background-color: #c8e4d6; }
+    .bg-eaa9a4 { background-color: #eaa9a4; }
+    .bg-f1e4e3 { background-color: #f1e4e3; }
+    .bg-c1e1d2 { background-color: #c1e1d2; }
+    .bg-bfe1d0 { background-color: #bfe1d0; }
+    .bg-87cdaa { background-color: #87cdaa; }
+    .bg-aedbc5 { background-color: #aedbc5; }
+    .bg-cfe6db { background-color: #cfe6db; }
+    .bg-eaa7a1 { background-color: #eaa7a1; }
+    .bg-a4d7be { background-color: #a4d7be; }
+    .bg-f0d9d7 { background-color: #f0d9d7; }
+    .bg-f0dfdd { background-color: #f0dfdd; }
+    .bg-ebaba6 { background-color: #ebaba6; }
+    .bg-70c49b { background-color: #70c49b; }
+    .bg-d0e7db { background-color: #d0e7db; }
+    .bg-b0dbc6 { background-color: #b0dbc6; }
+    .bg-cee6da { background-color: #cee6da; }
+    .bg-a9d9c2 { background-color: #a9d9c2; }
+    .bg-d2e8dd { background-color: #d2e8dd; }
+    .bg-e8968f { background-color: #e8968f; }
+    .bg-aad9c2 { background-color: #aad9c2; }
+    .bg-abd9c2 { background-color: #abd9c2; }
+    .bg-edc0bc { background-color: #edc0bc; }
+    .bg-a4d7be { background-color: #a4d7be; }
+    .bg-8cceae { background-color: #8cceae; }
+    .bg-9cd4b8 { background-color: #9cd4b8; }
+    .bg-f3f3f3 { background-color: #f3f3f3; }
+    .bg-9dd4b9 { background-color: #9dd4b9; }
+    .bg-7dc9a3 { background-color: #7dc9a3; }
+    .bg-ecbab5 { background-color: #ecbab5; }
+    .bg-cfe6db { background-color: #cfe6db; }
+    .bg-6fc49a { background-color: #6fc49a; }
+    .bg-6dc399 { background-color: #6dc399; }
+    .bg-a0d5bb { background-color: #a0d5bb; }
+    .bg-bcdfce { background-color: #bcdfce; }
+    .bg-6ac297 { background-color: #6ac297; }
+    .bg-ebb0ab { background-color: #ebb0ab; }
+    .bg-63bf92 { background-color: #63bf92; }
+    .bg-cce5d9 { background-color: #cce5d9; }
+    .bg-cbe5d8 { background-color: #cbe5d8; }
+    .bg-ecf1ef { background-color: #ecf1ef; }
+    .bg-57bb8a { background-color: #57bb8a; }
+    .bg-58bc8b { background-color: #58bc8b; }
+    .bg-67c195 { background-color: #67c195; }
+    .bg-efd4d2 { background-color: #efd4d2; }
+    .bg-59bc8c { background-color: #59bc8c; }
+    .bg-f2eceb { background-color: #f2eceb; }
+    .bg-8ecfaf { background-color: #8ecfaf; }
+    .bg-70c49b { background-color: #70c49b; }
+    .bg-7ec9a5 { background-color: #7ec9a5; }
+    .bg-5bbd8d { background-color: #5bbd8d; }
+    .bg-ecb9b5 { background-color: #ecb9b5; }
+    .bg-7fcaa5 { background-color: #7fcaa5; }
+    .bg-6bc398 { background-color: #6bc398; }
+    .bg-bfe1d0 { background-color: #bfe1d0; }
+    .bg-b6ddca { background-color: #b6ddca; }
+    .bg-8ecfaf { background-color: #8ecfaf; }
+    .bg-5abc8c { background-color: #5abc8c; }
+    .bg-b5ddca { background-color: #b5ddca; }
+    .bg-88cdab { background-color: #88cdab; }
+    .bg-6bc298 { background-color: #6bc298; }
+    .bg-66c194 { background-color: #66c194; }
+    .bg-ddebe4 { background-color: #ddebe4; }
+    .bg-a8d8c1 { background-color: #a8d8c1; }
+    .bg-76c69f { background-color: #76c69f; }
+    .bg-b0dbc6 { background-color: #b0dbc6; }
+    .bg-6dc399 { background-color: #6dc399; }
+
+    /* Carousel styling */
+    .carousel-container {
+      margin: 20px 0 40px 0;
+    }
+
+    .carousel {
+      max-width: 600px !important;
+      margin: 0 auto !important;
+    }
+
+    .carousel-item {
+      width: 600px !important;
+      margin: 0 auto !important;
+    }
+
+    .carousel-item img {
+      display: block !important;
+      height: 400px !important;
+      width: 600px !important;
+      object-fit: contain !important;
+      border-radius: 8px !important;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1) !important;
+    }
+
+    .carousel-caption {
+      background-color: rgba(255, 255, 255, 0.9) !important;
+      border-radius: 4px !important;
+      padding: 8px !important;
+      margin-top: 10px !important;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
+      text-align: center !important;
+      width: 600px !important;
+      margin: 10px auto 0 !important;
+    }
+
+    .carousel-caption .model-name {
+      font-weight: bold;
+      color: #1a5fb4;
+    }
+
+    .carousel-caption .detection-score {
+      font-weight: bold;
+      color: #333;
+    }
+
+    /* Fix for carousel navigation dots */
+    .slider-pagination {
+      position: relative !important;
+      bottom: -30px !important;
+    }
+
+    .slider-pagination .slider-page {
+      background-color: #ccc;
+      width: 10px;
+      height: 10px;
+      margin: 0 3px;
+    }
+
+    .slider-pagination .slider-page.is-active {
+      background-color: #1a5fb4;
+    }
+
+    .robustness-figure {
+      display: block;
+      max-width: 100%;
+      margin: 15px auto;
+    }
+
+    .robustness-legend {
+      display: block;
+      max-width: 60%;
+      margin: 2em auto 0 auto;
+    }
+
+    .robustness-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 5px;
+      margin: 5px 0;
+    }
+
+    .robustness-item {
+      text-align: center;
+    }
+
+    .robustness-item h4 {
+      font-size: 1rem;
+      margin: 10px 0;
+    }
+  </style>
 </head>
 <body>
 
@@ -60,84 +324,43 @@
               <span class="author-block">Efstratios Gavves<sup>2,3</sup></span>
             </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <span class="eql-cntrb"><br><sup>1</sup>Information Technologies Institute, CERTH, Greece</span><br>
-                    <span class="eql-cntrb"><sup>2</sup>University of Amsterdam, The Netherlands</span><br>
-                    <span class="eql-cntrb"><sup>3</sup>Archimedes/Athena RC, Greece</span><br>
-                    <span class="author-block"><br>Accepted on CVPR 2025</span><br>
-<!--                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>-->
-                  </div>
+            <div class="is-size-5 publication-authors">
+              <span class="eql-cntrb"><br><sup>1</sup>Information Technologies Institute, CERTH, Greece</span><br>
+              <span class="eql-cntrb"><sup>2</sup>University of Amsterdam, The Netherlands</span><br>
+              <span class="eql-cntrb"><sup>3</sup>Archimedes/Athena RC, Greece</span><br>
+              <span class="author-block"><br>Accepted on CVPR 2025</span><br>
+            </div>
 
-<!--                  <div class="column has-text-centered">-->
-<!--                    <div class="publication-links">-->
-<!--                         &lt;!&ndash; Arxiv PDF link &ndash;&gt;-->
-<!--                      <span class="link-block">-->
-<!--                        <a href="https://arxiv.org/abs/2411.19417" target="_blank"-->
-<!--                        class="external-link button is-normal is-rounded is-dark">-->
-<!--                        <span class="icon">-->
-<!--                          <i class="fas fa-file-pdf"></i>-->
-<!--                        </span>-->
-<!--                        <span>Paper</span>-->
-<!--                      </a>-->
-<!--                    </span>-->
-
-<!--                    &lt;!&ndash; Supplementary PDF link &ndash;&gt;-->
-<!--                    <span class="link-block">-->
-<!--                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"-->
-<!--                      class="external-link button is-normal is-rounded is-dark">-->
-<!--                      <span class="icon">-->
-<!--                        <i class="fas fa-file-pdf"></i>-->
-<!--                      </span>-->
-<!--                      <span>Supplementary</span>-->
-<!--                    </a>-->
-<!--                  </span>-->
-
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <a href="https://github.com/mever-team/spai" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-                <!-- ArXiv abstract Link -->
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Github link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/2411.19417" target="_blank"
+                  <a href="https://github.com/mever-team/spai" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                    <i class="ai ai-arxiv"></i>
+                    <i class="fab fa-github"></i>
                   </span>
-                  <span>arXiv</span>
+                  <span>Code</span>
                 </a>
               </span>
-            </div>
+
+              <!-- ArXiv abstract Link -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2411.19417" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="ai ai-arxiv"></i>
+                </span>
+                <span>arXiv</span>
+              </a>
+            </span>
           </div>
         </div>
       </div>
     </div>
   </div>
+  </div>
 </section>
-
-
-<!--&lt;!&ndash; Teaser video&ndash;&gt;-->
-<!--<section class="hero teaser">-->
-<!--  <div class="container is-max-desktop">-->
-<!--    <div class="hero-body">-->
-<!--      <video poster="" id="tree" autoplay controls muted loop height="100%">-->
-<!--        &lt;!&ndash; Your video here &ndash;&gt;-->
-<!--        <source src="static/videos/banner_video.mp4"-->
-<!--        type="video/mp4">-->
-<!--      </video>-->
-<!--      <h2 class="subtitle has-text-centered">-->
-<!--        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. -->
-<!--      </h2>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</section>-->
-<!--&lt;!&ndash; End teaser video &ndash;&gt;-->
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -156,162 +379,606 @@
 </section>
 <!-- End paper abstract -->
 
+<!-- Key Contributions -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Key Contributions</h2>
 
-<!--&lt;!&ndash; Image carousel &ndash;&gt;-->
-<!--<section class="hero is-small">-->
-<!--  <div class="hero-body">-->
-<!--    <div class="container">-->
-<!--      <div id="results-carousel" class="carousel results-carousel">-->
-<!--       <div class="item">-->
-<!--        &lt;!&ndash; Your image here &ndash;&gt;-->
-<!--        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>-->
-<!--        <h2 class="subtitle has-text-centered">-->
-<!--          First image description.-->
-<!--        </h2>-->
-<!--      </div>-->
-<!--      <div class="item">-->
-<!--        &lt;!&ndash; Your image here &ndash;&gt;-->
-<!--        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>-->
-<!--        <h2 class="subtitle has-text-centered">-->
-<!--          Second image description.-->
-<!--        </h2>-->
-<!--      </div>-->
-<!--      <div class="item">-->
-<!--        &lt;!&ndash; Your image here &ndash;&gt;-->
-<!--        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>-->
-<!--        <h2 class="subtitle has-text-centered">-->
-<!--         Third image description.-->
-<!--       </h2>-->
-<!--     </div>-->
-<!--     <div class="item">-->
-<!--      &lt;!&ndash; Your image here &ndash;&gt;-->
-<!--      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>-->
-<!--      <h2 class="subtitle has-text-centered">-->
-<!--        Fourth image description.-->
-<!--      </h2>-->
+    <!-- Highlights figure -->
+    <div class="columns is-centered">
+      <div class="column is-10">
+        <div class="content has-text-centered">
+          <img src="static/images/highlights.svg" alt="SPAI Highlights"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-10">
+        <div class="content has-text-justified">
+          <p>Our work introduces several key innovations in AI-generated image detection:</p>
+
+          <ol>
+            <li><strong>Spectral Distribution as an Invariant Pattern:</strong> We establish that the spectral distribution of real images serves as a suitable invariant pattern for distinguishing between real and AI-generated images, as it is not directly affected by the introduction of specific generative models while providing significant discriminative power.</li>
+
+            <li><strong>Masked Spectral Learning:</strong> We propose a self-supervised approach that employs the pretext task of frequency reconstruction to model the spectral distribution of real images, using only real images for training.</li>
+
+            <li><strong>Spectral Reconstruction Similarity (SRS):</strong> We introduce a novel method for detecting AI-generated images as out-of-distribution samples by measuring the divergence between the reconstructed frequencies and those actually present in the image.</li>
+
+            <li><strong>Spectral Context Attention (SCA):</strong> We develop a mechanism that enables efficient processing of images at any resolution without prior pre-processing, allowing our approach to capture subtle spectral inconsistencies in high-resolution images.</li>
+
+            <li><strong>State-of-the-Art Performance:</strong> SPAI achieves a 5.5% absolute improvement in AUC over previous state-of-the-art across 13 recent generative approaches, while exhibiting robustness against common online perturbations.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Key Contributions -->
+
+<!-- Method -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Method</h2>
+
+    <!-- Method overview figure -->
+    <div class="columns is-centered">
+      <div class="column is-10">
+        <div class="content has-text-centered method-figure">
+          <img src="static/images/overview.svg" alt="SPAI Method Overview"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-10">
+        <div class="content has-text-justified">
+          <h3 class="title is-4">Masked Spectral Learning</h3>
+          <p>
+            To build a spectral model of real images, we propose using the pretext task of frequency reconstruction under a self-supervised learning setup, using only real images. We randomly mask the low- or high-frequency component of the input images and train the model under the objective of reconstructing the missing frequencies. This approach allows us to learn the spectral distribution of real images without requiring labeled AI-generated samples.
+          </p>
+
+          <h3 class="title is-4">Spectral Reconstruction Similarity</h3>
+          <p>
+            As our model constitutes a spectral model of real images, it is expected to better reconstruct the missing frequencies of real images compared to AI-generated ones. We introduce Spectral Reconstruction Similarity (SRS) to measure this divergence. SRS calculates the similarity between the features of the original image and its low/high-frequency components, expecting larger distances for AI-generated images compared to real ones.
+          </p>
+
+          <h3 class="title is-4">Spectral Context Attention</h3>
+          <p>
+            Capturing subtle clues in images is crucial for effectively distinguishing between real and AI-generated content. However, most computer vision models cannot efficiently scale to the native resolution of modern photos. Our Spectral Context Attention (SCA) enables processing of high-resolution images without resizing, combining the most discriminative spectral reconstruction similarity values from different patches according to their respective context. This allows our approach to efficiently capture subtle spectral inconsistencies in images of any resolution.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Method -->
+
+<!-- Results -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Results</h2>
+
+    <div class="columns is-centered">
+      <div class="column is-10">
+        <div class="content has-text-justified">
+          <h3 class="title is-4">Performance Comparison</h3>
+          <p>
+            We evaluated SPAI against 12 state-of-the-art methods across 13 different generative models, including early approaches like Stable Diffusion 1.3/1.4 and recent high-fidelity generators like Stable Diffusion 3, DALLE-3, and Midjourney v6.1. While competing methods often excel on some generators but fail catastrophically on others, SPAI consistently performs well across all tested generative models.
+          </p>
+
+          <!-- State-of-the-art comparison table -->
+          <div class="table-container">
+            <table class="sota-table">
+              <thead>
+                <tr>
+                  <th rowspan="2">Approach</th>
+                  <th colspan="3">&lt; 0.5 MPixels</th>
+                  <th colspan="6">0.5 - 1.0 MPixels</th>
+                  <th colspan="4">&gt; 1.0 MPixels</th>
+                  <th rowspan="2">AVG</th>
+                </tr>
+                <tr>
+                  <th>Glide</th>
+                  <th>SD1.3</th>
+                  <th>SD1.4</th>
+                  <th>Flux</th>
+                  <th>DALLE2</th>
+                  <th>SD2</th>
+                  <th>SDXL</th>
+                  <th>SD3</th>
+                  <th>GigaGAN</th>
+                  <th>MJv5</th>
+                  <th>MJv6.1</th>
+                  <th>DALLE3</th>
+                  <th>Firefly</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>NPR</td>
+                  <td class="bg-f1f3f2">72.2</td>
+                  <td class="bg-91d0b1">89.6</td>
+                  <td class="bg-f0dfdd">60.5</td>
+                  <td class="bg-e99791">19.8</td>
+                  <td class="bg-e67c73">3.9</td>
+                  <td class="bg-e78b83">12.5</td>
+                  <td class="bg-e8958d">18.1</td>
+                  <td class="bg-f0dfde">60.6</td>
+                  <td class="bg-b4ddc9">83.2</td>
+                  <td class="bg-e89088">15.3</td>
+                  <td class="bg-e99791">19.8</td>
+                  <td class="bg-67c195">97.1</td>
+                  <td class="bg-ecb7b3">38.0</td>
+                  <td>45.4</td>
+                </tr>
+                <tr>
+                  <td>Dire</td>
+                  <td class="bg-ebafaa">33.3</td>
+                  <td class="bg-f0dedc">59.9</td>
+                  <td class="bg-f1e0df">61.3</td>
+                  <td class="bg-eec5c1">45.7</td>
+                  <td class="bg-efd0ce">52.2</td>
+                  <td class="bg-f2edec">68.5</td>
+                  <td class="bg-eec7c4">46.9</td>
+                  <td class="bg-eecbc8">49.2</td>
+                  <td class="bg-ecb4b0">36.3</td>
+                  <td class="bg-edbeba">41.9</td>
+                  <td class="bg-eecdca">50.3</td>
+                  <td class="bg-f1e7e6">65.2</td>
+                  <td class="bg-eeccc9">49.9</td>
+                  <td>50.8</td>
+                </tr>
+                <tr>
+                  <td>CNNDet.</td>
+                  <td class="bg-f0dddb">59.2</td>
+                  <td class="bg-f0dcdb">59.0</td>
+                  <td class="bg-f0e0df">61.2</td>
+                  <td class="bg-ecbbb6">39.8</td>
+                  <td class="bg-f2f2f2">71.5</td>
+                  <td class="bg-f0dad8">57.5</td>
+                  <td class="bg-f2ebea">67.4</td>
+                  <td class="bg-ebaaa4">30.2</td>
+                  <td class="bg-eaf0ed">73.4</td>
+                  <td class="bg-eecac7">48.8</td>
+                  <td class="bg-f0d8d6">56.7</td>
+                  <td class="bg-e99e97">23.5</td>
+                  <td class="bg-eaf0ed">73.4</td>
+                  <td>55.5</td>
+                </tr>
+                <tr>
+                  <td>FreqDet.</td>
+                  <td class="bg-edc1bd">43.6</td>
+                  <td class="bg-82cba7">92.3</td>
+                  <td class="bg-80caa6">92.7</td>
+                  <td class="bg-ecb5b0">36.5</td>
+                  <td class="bg-eec8c5">47.4</td>
+                  <td class="bg-edbfbb">42.5</td>
+                  <td class="bg-f2e9e9">66.5</td>
+                  <td class="bg-f2efef">69.8</td>
+                  <td class="bg-f1e4e2">63.2</td>
+                  <td class="bg-ecb5b1">36.9</td>
+                  <td class="bg-eaa59f">27.5</td>
+                  <td class="bg-edbfbb">42.2</td>
+                  <td class="bg-c1e1d2">80.9</td>
+                  <td>57.1</td>
+                </tr>
+                <tr>
+                  <td>Fusing</td>
+                  <td class="bg-f1e3e2">63.0</td>
+                  <td class="bg-f1e3e2">62.8</td>
+                  <td class="bg-f1e2e1">62.2</td>
+                  <td class="bg-f0dad8">57.5</td>
+                  <td class="bg-d8eae1">76.7</td>
+                  <td class="bg-f2eae9">66.9</td>
+                  <td class="bg-f1e2e0">62.1</td>
+                  <td class="bg-ecb9b4">38.8</td>
+                  <td class="bg-c4e2d3">80.4</td>
+                  <td class="bg-f1e5e4">64.0</td>
+                  <td class="bg-e7efeb">74.0</td>
+                  <td class="bg-eaa19b">25.2</td>
+                  <td class="bg-daeae2">76.3</td>
+                  <td>62.3</td>
+                </tr>
+                <tr>
+                  <td>LGrad</td>
+                  <td class="bg-d9eae2">76.5</td>
+                  <td class="bg-b9decc">82.4</td>
+                  <td class="bg-b3dcc8">83.4</td>
+                  <td class="bg-e2ede8">74.9</td>
+                  <td class="bg-a7d8c0">85.7</td>
+                  <td class="bg-f0dfde">60.7</td>
+                  <td class="bg-f2f0f0">70.2</td>
+                  <td class="bg-e78b83">12.7</td>
+                  <td class="bg-8fcfb0">89.9</td>
+                  <td class="bg-f2eeee">69.2</td>
+                  <td class="bg-c8e4d6">79.6</td>
+                  <td class="bg-eaa9a4">30.0</td>
+                  <td class="bg-edbebb">42.0</td>
+                  <td>65.9</td>
+                </tr>
+                <tr>
+                  <td>UnivFD</td>
+                  <td class="bg-f1e4e3">63.3</td>
+                  <td class="bg-c1e1d2">80.8</td>
+                  <td class="bg-bfe1d0">81.2</td>
+                  <td class="bg-ecb4b0">36.3</td>
+                  <td class="bg-87cdaa">91.4</td>
+                  <td class="bg-aedbc5">84.3</td>
+                  <td class="bg-cfe6db">78.3</td>
+                  <td class="bg-eaa7a1">28.6</td>
+                  <td class="bg-a4d7be">86.2</td>
+                  <td class="bg-f0d9d7">57.1</td>
+                  <td class="bg-f0dfdd">60.5</td>
+                  <td class="bg-ebaba6">31.0</td>
+                  <td class="bg-70c49b">95.5</td>
+                  <td>67.3</td>
+                </tr>
+                <tr>
+                  <td>GramNet</td>
+                  <td class="bg-d0e7db">78.2</td>
+                  <td class="bg-b0dbc6">83.9</td>
+                  <td class="bg-aedbc5">84.3</td>
+                  <td class="bg-cee6da">78.6</td>
+                  <td class="bg-a9d9c2">85.2</td>
+                  <td class="bg-f2eae9">66.7</td>
+                  <td class="bg-d2e8dd">77.8</td>
+                  <td class="bg-e8968f">19.2</td>
+                  <td class="bg-aad9c2">85.0</td>
+                  <td class="bg-f1e5e4">63.8</td>
+                  <td class="bg-abd9c2">84.9</td>
+                  <td class="bg-edc0bc">42.9</td>
+                  <td class="bg-ecb7b3">38.0</td>
+                  <td>68.4</td>
+                </tr>
+                <tr>
+                  <td>DeFake</td>
+                  <td class="bg-a4d7be">86.1</td>
+                  <td class="bg-f1e5e4">64.2</td>
+                  <td class="bg-f1e4e3">63.6</td>
+                  <td class="bg-8cceae">90.5</td>
+                  <td class="bg-edbdb9">41.4</td>
+                  <td class="bg-f1e9e8">66.2</td>
+                  <td class="bg-efd0ce">52.3</td>
+                  <td class="bg-9cd4b8">87.7</td>
+                  <td class="bg-f3f3f3">71.7</td>
+                  <td class="bg-f2eaea">67.0</td>
+                  <td class="bg-9dd4b9">87.5</td>
+                  <td class="bg-7dc9a3">93.3</td>
+                  <td class="bg-ecbab5">39.4</td>
+                  <td>70.1</td>
+                </tr>
+                <tr>
+                  <td>PatchCr.</td>
+                  <td class="bg-cfe6db">78.4</td>
+                  <td class="bg-6fc49a">95.7</td>
+                  <td class="bg-6dc399">96.2</td>
+                  <td class="bg-a0d5bb">86.9</td>
+                  <td class="bg-bcdfce">81.8</td>
+                  <td class="bg-6fc49a">95.7</td>
+                  <td class="bg-6ac297">96.7</td>
+                  <td class="bg-ebb0ab">33.8</td>
+                  <td class="bg-63bf92">98.0</td>
+                  <td class="bg-cce5d9">79.0</td>
+                  <td class="bg-6dc399">96.1</td>
+                  <td class="bg-eaa6a0">28.1</td>
+                  <td class="bg-cbe5d8">79.1</td>
+                  <td>80.4</td>
+                </tr>
+                <tr>
+                  <td>DMID</td>
+                  <td class="bg-ecf1ef">73.1</td>
+                  <td class="bg-57bb8a">100.0</td>
+                  <td class="bg-58bc8b">100.0</td>
+                  <td class="bg-67c195">97.2</td>
+                  <td class="bg-efd4d2">54.3</td>
+                  <td class="bg-59bc8c">99.7</td>
+                  <td class="bg-59bc8c">99.6</td>
+                  <td class="bg-f2eceb">67.9</td>
+                  <td class="bg-f2eceb">67.9</td>
+                  <td class="bg-58bc8b">99.9</td>
+                  <td class="bg-76c79f">94.4</td>
+                  <td class="bg-edbdb9">41.3</td>
+                  <td class="bg-8ecfaf">90.2</td>
+                  <td>83.5</td>
+                </tr>
+                <tr>
+                  <td>RINE</td>
+                  <td class="bg-70c49b">95.6</td>
+                  <td class="bg-58bc8b">99.9</td>
+                  <td class="bg-58bc8b">99.9</td>
+                  <td class="bg-7ec9a5">93.0</td>
+                  <td class="bg-7ec9a5">93.0</td>
+                  <td class="bg-6ac297">96.6</td>
+                  <td class="bg-5bbd8d">99.3</td>
+                  <td class="bg-ecb9b5">39.1</td>
+                  <td class="bg-7fcaa5">92.9</td>
+                  <td class="bg-6bc398">96.4</td>
+                  <td class="bg-bfe1d0">81.2</td>
+                  <td class="bg-edbeba">41.8</td>
+                  <td class="bg-b6ddca">82.9</td>
+                  <td>85.5</td>
+                </tr>
+                <tr class="highlight">
+                  <td>SPAI (Ours)</td>
+                  <td class="bg-8ecfaf">90.2</td>
+                  <td class="bg-5abc8c">99.6</td>
+                  <td class="bg-5abc8c">99.6</td>
+                  <td class="bg-b5ddca">83.0</td>
+                  <td class="bg-88cdab">91.1</td>
+                  <td class="bg-6bc298">96.5</td>
+                  <td class="bg-66c194">97.4</td>
+                  <td class="bg-ddebe4">75.9</td>
+                  <td class="bg-a8d8c1">85.4</td>
+                  <td class="bg-76c69f">94.5</td>
+                  <td class="bg-b0dbc6">84.0</td>
+                  <td class="bg-8ecfaf">90.2</td>
+                  <td class="bg-6dc399">96.0</td>
+                  <td><strong>91.0</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            As shown in the table above, SPAI achieves a 5.5% absolute improvement in average AUC over the previous state-of-the-art. While other methods may perform better on specific generators, SPAI consistently performs well across all tested models, demonstrating its superior generalization capability.
+          </p>
+
+<!--          <h3 class="title is-4">Robustness Against Perturbations</h3>-->
+<!--          <p>-->
+<!--            SPAI demonstrates superior robustness against common online perturbations, including JPEG and WebP compression, Gaussian blur, Gaussian noise, and resizing. This robustness is critical for real-world applications where images often undergo various transformations before analysis.-->
+<!--          </p>-->
+
+          <h3 class="title is-4">Qualitative Analysis</h3>
+          <p>
+            Our Spectral Context Attention mechanism correctly identifies problematic regions in AI-generated images, such as anatomical anomalies (e.g., six-fingered hands) and texture inconsistencies, as shown in the examples below:
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Attention visualization examples -->
+    <div class="columns is-centered">
+      <div class="column is-5">
+        <div class="content has-text-centered">
+          <figure>
+            <img src="static/images/attn_overlay_1.png" alt="Six-finger case correctly spotted"/>
+            <figcaption>Six-finger case correctly spotted by SPAI</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="column is-5">
+        <div class="content has-text-centered">
+          <figure>
+            <img src="static/images/attn_overlay.png" alt="Attending texture-rich regions"/>
+            <figcaption>SPAI attending to texture-rich regions</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+      <div class="column is-10">
+    <h3 class="title is-4">Robustness Analysis</h3>
+    <div class="columns is-centered">
+
+    </div>
+
+
+      <p>We evaluated the robustness of SPAI against common online perturbations that images typically undergo when shared on the internet. The results demonstrate that our approach maintains superior performance even when images are subjected to various types of degradation.</p>
+
+      <div class="text-center">
+        <img src="static/images/robustness/perturbations_legend.svg" alt="Robustness Analysis Legend" class="robustness-legend">
+      </div>
+      <div class="container is-max-desktop">
+      <div class="robustness-grid text-center">
+        <div class="robustness-item">
+          <h4>JPEG Compression</h4>
+          <img src="static/images/robustness/jpeg_compression.svg" alt="JPEG Compression Robustness" class="robustness-figure">
+        </div>
+        <div class="robustness-item text-center">
+          <h4>WebP Compression</h4>
+          <img src="static/images/robustness/webp_compression.svg" alt="WebP Compression Robustness" class="robustness-figure">
+        </div>
+        <div class="robustness-item text-center">
+          <h4 class="text-center">Gaussian Blur</h4>
+          <img src="static/images/robustness/blur.svg" alt="Gaussian Blur Robustness" class="robustness-figure">
+        </div>
+        <div class="robustness-item text-center">
+          <h4>Gaussian Noise</h4>
+          <img src="static/images/robustness/noise.svg" alt="Gaussian Noise Robustness" class="robustness-figure">
+        </div>
+        <div class="robustness-item text-center">
+          <h4>Resize</h4>
+          <img src="static/images/robustness/scale.svg" alt="Resize Robustness" class="robustness-figure">
+        </div>
+      </div>
+      </div>
+        <p>The robustness evaluation shows that SPAI consistently outperforms competing methods across various types of perturbations, including JPEG and WebP compression, Gaussian blur, Gaussian noise, and image resizing. This demonstrates the practical applicability of our approach in real-world scenarios where images often undergo multiple transformations.</p>
+      </div>
+    </div>
+    </div>
 <!--    </div>-->
-<!--  </div>-->
-<!--</div>-->
-<!--</div>-->
-<!--</section>-->
-<!--&lt;!&ndash; End image carousel &ndash;&gt;-->
+<!--    </section>-->
 
+    <!-- Image carousel for qualitative evaluation -->
+    <div class="columns is-centered" style="margin-top: 2em;">
+      <div class="column is-10">
+        <h3 class="title is-4 has-text-centered">Examples</h3>
+        <div id="qualitative-carousel" class="carousel carousel-container">
+          <!-- Generative Models -->
+          <div class="item carousel-item">
+            <img src="static/images/carousel_all/flux_ComfyUI_10831_-1.0.jpg" alt="Flux example"/>
+            <div class="carousel-caption">
+              <span class="model-name">Flux</span> - Detection score: <span class="detection-score">1.0</span>
+            </div>
+          </div>
+          <div class="item carousel-item">
+            <img src="static/images/carousel_all/gigagan_00163-1.0.jpg" alt="GigaGAN example"/>
+            <div class="carousel-caption">
+              <span class="model-name">GigaGAN</span> - Detection score: <span class="detection-score">1.0</span>
+            </div>
+          </div>
+          <div class="item carousel-item">
+            <img src="static/images/carousel_all/mj61_224-0.748.jpg" alt="Midjourney v6.1 example"/>
+            <div class="carousel-caption">
+              <span class="model-name">Midjourney v6.1</span> - Detection score: <span class="detection-score">0.748</span>
+            </div>
+          </div>
+          <div class="item carousel-item">
+            <img src="static/images/carousel_all/sd3_000001046_4-0.87.jpg" alt="Stable Diffusion 3 example"/>
+            <div class="carousel-caption">
+              <span class="model-name">Stable Diffusion 3</span> - Detection score: <span class="detection-score">0.87</span>
+            </div>
+          </div>
+          <div class="item carousel-item">
+            <img src="static/images/carousel_all/dalle2_r1db5be20t-0.99.jpg" alt="DALLE-2 example"/>
+            <div class="carousel-caption">
+              <span class="model-name">DALLE-2</span> - Detection score: <span class="detection-score">0.99</span>
+            </div>
+          </div>
+          <div class="item carousel-item">
+            <img src="static/images/carousel_all/dalle3_r1a343192t-0.90.jpg" alt="DALLE-3 example"/>
+            <div class="carousel-caption">
+              <span class="model-name">DALLE-3</span> - Detection score: <span class="detection-score">0.90</span>
+            </div>
+          </div>
+          <div class="item carousel-item">
+            <img src="static/images/carousel_all/firefly_r0b13d2a2t-1.0.jpg" alt="Firefly example"/>
+            <div class="carousel-caption">
+              <span class="model-name">Firefly</span> - Detection score: <span class="detection-score">1.0</span>
+            </div>
+          </div>
+          <div class="item carousel-item">
+            <img src="static/images/carousel_all/glide_r0ed019a4t-1.0.png" alt="Glide example"/>
+            <div class="carousel-caption">
+              <span class="model-name">Glide</span> - Detection score: <span class="detection-score">1.0</span>
+            </div>
+          </div>
+          <div class="item carousel-item">
+            <img src="static/images/carousel_all/mj5_r0c1f588dt-1.0.jpg" alt="Midjourney v5 example"/>
+            <div class="carousel-caption">
+              <span class="model-name">Midjourney v5</span> - Detection score: <span class="detection-score">1.0</span>
+            </div>
+          </div>
+          <div class="item carousel-item">
+            <img src="static/images/carousel_all/sd13_r0f36ba1bt-1.0.png" alt="Stable Diffusion 1.3 example"/>
+            <div class="carousel-caption">
+              <span class="model-name">Stable Diffusion 1.3</span> - Detection score: <span class="detection-score">1.0</span>
+            </div>
+          </div>
+          <div class="item carousel-item">
+            <img src="static/images/carousel_all/sd14_r1a8d7a86t-1.0.png" alt="Stable Diffusion 1.4 example"/>
+            <div class="carousel-caption">
+              <span class="model-name">Stable Diffusion 1.4</span> - Detection score: <span class="detection-score">1.0</span>
+            </div>
+          </div>
+          <div class="item carousel-item">
+            <img src="static/images/carousel_all/sd2_r0c9e4ff8t-0.98.jpg" alt="Stable Diffusion 2 example"/>
+            <div class="carousel-caption">
+              <span class="model-name">Stable Diffusion 2</span> - Detection score: <span class="detection-score">0.98</span>
+            </div>
+          </div>
+          <div class="item carousel-item">
+            <img src="static/images/carousel_all/sdxl_r0c2fb2a1t-1.0.jpg" alt="Stable Diffusion XL example"/>
+            <div class="carousel-caption">
+              <span class="model-name">Stable Diffusion XL</span> - Detection score: <span class="detection-score">1.0</span>
+            </div>
+          </div>
 
+          <!-- Real Image Sources -->
+          <div class="item carousel-item">
+            <img src="static/images/carousel_all/coco_000000019115-0.0.jpg" alt="COCO example"/>
+            <div class="carousel-caption">
+              <span class="model-name">COCO (Real)</span> - Detection score: <span class="detection-score">0.0</span>
+            </div>
+          </div>
+          <div class="item carousel-item">
+            <img src="static/images/carousel_all/fodb_D06_img_telegram_0139-0.0.jpg" alt="FODB example"/>
+            <div class="carousel-caption">
+              <span class="model-name">FODB (Real)</span> - Detection score: <span class="detection-score">0.0</span>
+            </div>
+          </div>
+          <div class="item carousel-item">
+            <img src="static/images/carousel_all/imagenet_ILSVRC2012_test_00023255.JPEG" alt="ImageNet example"/>
+            <div class="carousel-caption">
+              <span class="model-name">ImageNet (Real)</span> - Detection score: <span class="detection-score">0.0</span>
+            </div>
+          </div>
+          <div class="item carousel-item">
+            <img src="static/images/carousel_all/openimages_65b410839323ec3d-0.09.jpg" alt="Open Images example"/>
+            <div class="carousel-caption">
+              <span class="model-name">Open Images (Real)</span> - Detection score: <span class="detection-score">0.09</span>
+            </div>
+          </div>
+          <div class="item carousel-item">
+            <img src="static/images/carousel_all/raise_r1a020c3ft-0.0.jpg" alt="RAISE example"/>
+            <div class="carousel-caption">
+              <span class="model-name">RAISE (Real)</span> - Detection score: <span class="detection-score">0.0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <div class="columns is-centered">
+      <div class="column is-10">
+        <div class="content has-text-justified">
+          <h3 class="title is-4" style="padding-top: 3em">Limitations</h3>
+          <p>
+            While SPAI exhibits superior generalization performance and robustness, it still faces challenges with derivative AI-generated images (screenshots, memes, photographs of screens, printed material). Compression algorithms and noisy digital/analog channels can corrupt the spectral information needed for detection. These limitations affect any detector relying solely on image signal properties and highlight potential future directions combining spectral learning with semantic context understanding.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Results -->
 
-<!--&lt;!&ndash; Youtube video &ndash;&gt;-->
-<!--<section class="hero is-small is-light">-->
-<!--  <div class="hero-body">-->
-<!--    <div class="container">-->
-<!--      &lt;!&ndash; Paper video. &ndash;&gt;-->
-<!--      <h2 class="title is-3">Video Presentation</h2>-->
-<!--      <div class="columns is-centered has-text-centered">-->
-<!--        <div class="column is-four-fifths">-->
-<!--          -->
-<!--          <div class="publication-video">-->
-<!--            &lt;!&ndash; Youtube embed code here &ndash;&gt;-->
-<!--            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</section>-->
-<!--&lt;!&ndash; End youtube video &ndash;&gt;-->
-
-
-<!--&lt;!&ndash; Video carousel &ndash;&gt;-->
-<!--<section class="hero is-small">-->
-<!--  <div class="hero-body">-->
-<!--    <div class="container">-->
-<!--      <h2 class="title is-3">Another Carousel</h2>-->
-<!--      <div id="results-carousel" class="carousel results-carousel">-->
-<!--        <div class="item item-video1">-->
-<!--          <video poster="" id="video1" autoplay controls muted loop height="100%">-->
-<!--            &lt;!&ndash; Your video file here &ndash;&gt;-->
-<!--            <source src="static/videos/carousel1.mp4"-->
-<!--            type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--        <div class="item item-video2">-->
-<!--          <video poster="" id="video2" autoplay controls muted loop height="100%">-->
-<!--            &lt;!&ndash; Your video file here &ndash;&gt;-->
-<!--            <source src="static/videos/carousel2.mp4"-->
-<!--            type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--        <div class="item item-video3">-->
-<!--          <video poster="" id="video3" autoplay controls muted loop height="100%">\-->
-<!--            &lt;!&ndash; Your video file here &ndash;&gt;-->
-<!--            <source src="static/videos/carousel3.mp4"-->
-<!--            type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</section>-->
-<!--&lt;!&ndash; End video carousel &ndash;&gt;-->
-
-
-
-
-
-
-<!--&lt;!&ndash; Paper poster &ndash;&gt;-->
-<!--<section class="hero is-small is-light">-->
-<!--  <div class="hero-body">-->
-<!--    <div class="container">-->
-<!--      <h2 class="title">Poster</h2>-->
-
-<!--      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">-->
-<!--          </iframe>-->
-<!--        -->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </section>-->
-<!--&lt;!&ndash;End paper poster &ndash;&gt;-->
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>@article{karageorgiou2024any,
+<!-- BibTeX citation -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{karageorgiou2025any,
   title={Any-Resolution AI-Generated Image Detection by Spectral Learning},
   author={Karageorgiou, Dimitrios and Papadopoulos, Symeon and Kompatsiaris, Ioannis and Gavves, Efstratios},
-  journal={arXiv preprint arXiv:2411.19417},
-  year={2024}
-}
-</code></pre>
-    </div>
+  journal={IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year={2025}
+}</code></pre>
+  </div>
 </section>
-<!--End BibTex citation -->
+<!-- End BibTeX citation -->
 
-
-  <footer class="footer">
+<footer class="footer">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
+          <p align="center">
+            This page was built using <a href="https://nerfies.github.io" target="_blank">Nerfies</a></a>.
           </p>
-
         </div>
       </div>
     </div>
   </div>
 </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+<script>
+  // Initialize all carousels
+  document.addEventListener('DOMContentLoaded', function() {
+    var carousels = bulmaCarousel.attach('#qualitative-carousel', {
+      slidesToScroll: 1,
+      slidesToShow: 1,
+      infinite: true,
+      autoplay: true,
+      autoplaySpeed: 4000,
+      pagination: true
+    });
+  });
+</script>
 
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+<footer-btn></footer-btn>
+</body>
+</html>
