@@ -58,7 +58,7 @@ To compute the predicted scores for a set of images, place them under a director
 and use the following command.
 
 ```bash
-python -m spai --input <input_dir> --output <output_dir>
+python -m spai infer --input <input_dir> --output <output_dir>
 ```
 
 where:
