@@ -1,5 +1,5 @@
 # SPAI: Spectral AI-Generated Image Detector
-__Official code repository for the CVPR2025 paper [Any-Resolution AI-Generated Image Detection by Spectral Learning](https://arxiv.org/abs/2411.19417).__
+__Official code repository for the CVPR2025 paper [Any-Resolution AI-Generated Image Detection by Spectral Learning](https://openaccess.thecvf.com/content/CVPR2025/html/Karageorgiou_Any-Resolution_AI-Generated_Image_Detection_by_Spectral_Learning_CVPR_2025_paper.html).__
 
 <div align="center";">
 
