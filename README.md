@@ -29,10 +29,9 @@ samples of this learned model.**
 
 ### Hardware requirements
 
-The code originally targeted Nvidia L40S 48GB GPU, however many recent cuda-enabled GPUs should be
-supported. Inference should be effortless performed with less than 8GB of GPU RAM. As training originally
-targeted a 48GB GPU, a suitable GPU should be presented to reproduce the paper's setup
-without further modifications of the code. 
+The code originally targeted Nvidia L40S 48GB GPUs. Nevertheless, many recent cuda-enabled GPUs should be
+supported. Inference should be effortlessly performed with less than 8GB of GPU RAM. However, as training originally
+targeted a 48GB GPU, an equivalent GPU should be present to replicate the paper's training setup. 
 
 ### Required libraries
 To train and evaluate SPAI an anaconda environment can be used for installing all the 
@@ -197,10 +196,11 @@ For any question you can contact [d.karageorgiou@uva.nl](mailto:d.karageorgiou@u
 If you found this work useful for your research, you can cite the following paper:
 
 ```text
-@article{karageorgiou2025any,
-  title={Any-Resolution AI-Generated Image Detection by Spectral Learning},
+@inproceedings{karageorgiou2025any,
+  title={Any-resolution ai-generated image detection by spectral learning},
   author={Karageorgiou, Dimitrios and Papadopoulos, Symeon and Kompatsiaris, Ioannis and Gavves, Efstratios},
-  journal={IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
+  pages={18706--18717},
   year={2025}
 }
 ```
